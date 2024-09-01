@@ -1,8 +1,10 @@
 # Fuck-shit-fuck-Ui
 
---// Services
+--// loader
 ```
 local UserInputService = game:GetService("UserInputService");
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/lxte/lates-lib/main/Main.lua"))() 
 
 --// Library
 
@@ -10,10 +12,6 @@ local UserInputService = game:GetService("UserInputService");
 
 
 ```
-
-you need to copy this. without it ui aint gonna work
-
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/lxte/lates-lib/main/Main.lua"))() ```
 
 window
 
@@ -92,7 +90,7 @@ local Themes = {
 }
 ```
 
-sections and theme
+tab sections and theme
 
 
 ```
@@ -121,13 +119,13 @@ local Main = Window:AddTab({
 })
 ```
 
-Sextion
+Sextion (actual)
 
 ```
 Window:AddSection({ Name = "Non Interactable", Tab = Main })
 ```
 
-pargap
+pargap 
 
 ```
 Window:AddParagraph({
@@ -137,7 +135,7 @@ Window:AddParagraph({
 })
  ```
 
-sextion #2
+main rizz #2 (its an tab)
 
 ```
 Window:AddSection({ Name = "Interactable", Tab = Main })
@@ -234,13 +232,19 @@ Window:AddKeybind({
 --// Tab [SETTINGS]
 
 ```
+
+
+
 local Keybind = nil
 local Settings = Window:AddTab({
 	Title = "Settings",
 	Section = "Settings",
 	Icon = "rbxassetid://11293977610",
 })
+```
+keybind
 
+```
 Window:AddKeybind({
 	Title = "Minimize Keybind",
 	Description = "Set the keybind for Minimizing",
@@ -248,8 +252,12 @@ Window:AddKeybind({
 	Callback = function(Key) 
 		Window:SetSetting("Keybind", Key)
 	end,
-}) 
+})
+ ```
 
+ui themes
+
+```
 Window:AddDropdown({
 	Title = "Set Theme",
 	Description = "Set the theme of the library!",
@@ -262,8 +270,11 @@ Window:AddDropdown({
 	Callback = function(Theme) 
 		Window:SetTheme(Themes[Theme])
 	end,
-}) 
+})
+```
+Ui blur
 
+```
 Window:AddToggle({
 	Title = "UI Blur",
 	Description = "If enabled, must have your Roblox graphics set to 8+ for it to work",
@@ -273,8 +284,9 @@ Window:AddToggle({
 		Window:SetSetting("Blur", Boolean)
 	end,
 }) 
-
-
+```
+ui transperency
+```
 Window:AddSlider({
 	Title = "UI Transparency",
 	Description = "Set the transparency of the UI",
@@ -284,8 +296,11 @@ Window:AddSlider({
 	Callback = function(Amount) 
 		Window:SetSetting("Transparency", Amount)
 	end,
-}) 
+})
+```
+build in notification 
 
+```
 Window:Notify({
 	Title = "Hello World!",
 	Description = "Press Left Alt to Minimize and Open the tab!", 
