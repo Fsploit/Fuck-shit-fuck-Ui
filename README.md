@@ -4,8 +4,13 @@
 local UserInputService = game:GetService("UserInputService");
 
 --// Library
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/lxte/lates-lib/main/Main.lua"))()
-local Window = Library:CreateWindow({
+
+
+```local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/lxte/lates-lib/main/Main.lua"))()```
+
+window
+
+```local Window = Library:CreateWindow({
 	Title = "???", -- name of ui cus FUCK YOU
 	Theme = "Dark", -- Light,Dark. those are the only color ui theme in there so dont ask me nigga
 	
@@ -76,9 +81,12 @@ local Themes = {
 		Icon = Color3.fromRGB(220, 220, 220),
 	},
 
-}
+}```
 
---// Set the default theme
+sections and theme
+
+
+```--// Set the default theme
 Window:SetTheme(Themes.Dark)
 
 --// Sections
@@ -90,28 +98,35 @@ Window:AddTabSection({
 Window:AddTabSection({
 	Name = "Settings",
 	Order = 2,
-})
+})```
 
 --// Tab [MAIN]
 
-local Main = Window:AddTab({
+```local Main = Window:AddTab({
 	Title = "Components",
 	Section = "Main",
 	Icon = "rbxassetid://11963373994"
-})
+})```
 
-Window:AddSection({ Name = "Non Interactable", Tab = Main }) 
+Sextion
 
+```Window:AddSection({ Name = "Non Interactable", Tab = Main }) ```
 
-Window:AddParagraph({
+pargap
+
+```Window:AddParagraph({
 	Title = "Paragraph",
 	Description = "Insert any important text here.",
 	Tab = Main
-}) 
+}) ```
 
-Window:AddSection({ Name = "Interactable", Tab = Main }) 
+sextion #2
 
-Window:AddButton({
+```Window:AddSection({ Name = "Interactable", Tab = Main }) ```
+
+a button for this eheh
+
+```Window:AddButton({
 	Title = "Button",
 	Description = "I wonder what this does",
 	Tab = Main,
@@ -122,9 +137,11 @@ Window:AddButton({
 			Duration = 5
 		})
 	end,
-}) 
+}) ```
 
-Window:AddSlider({
+slizer
+
+```Window:AddSlider({
 	Title = "Slider",
 	Description = "Sliding",
 	Tab = Main,
@@ -132,9 +149,11 @@ Window:AddSlider({
 	Callback = function(Amount) 
 		warn(Amount);
 	end,
-}) 
+}) ```
 
-Window:AddToggle({
+togol
+
+```Window:AddToggle({
 	Title = "Toggle",
 	Description = "Switching",
 	Tab = Main,
@@ -142,7 +161,11 @@ Window:AddToggle({
 		warn(Boolean);
 	end,
 }) 
+```
+input
 
+
+```
 Window:AddInput({
 	Title = "Input",
 	Description = "Typing",
@@ -150,9 +173,12 @@ Window:AddInput({
 	Callback = function(Text) 
 		warn(Text);
 	end,
-}) 
+}) ````
 
 
+```
+drop nigga down
+```
 Window:AddDropdown({
 	Title = "Dropdown",
 	Description = "Selecting",
