@@ -1,16 +1,24 @@
 # Fuck-shit-fuck-Ui
 
 --// Services
+```
 local UserInputService = game:GetService("UserInputService");
 
 --// Library
 
 
-```local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/lxte/lates-lib/main/Main.lua"))()```
+
+
+```
+
+you need to copy this. without it ui aint gonna work
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/lxte/lates-lib/main/Main.lua"))() ```
 
 window
 
-```local Window = Library:CreateWindow({
+```
+local Window = Library:CreateWindow({
 	Title = "???", -- name of ui cus FUCK YOU
 	Theme = "Dark", -- Light,Dark. those are the only color ui theme in there so dont ask me nigga
 	
@@ -81,12 +89,14 @@ local Themes = {
 		Icon = Color3.fromRGB(220, 220, 220),
 	},
 
-}```
+}
+```
 
 sections and theme
 
 
-```--// Set the default theme
+```
+--// Set the default theme
 Window:SetTheme(Themes.Dark)
 
 --// Sections
@@ -98,35 +108,45 @@ Window:AddTabSection({
 Window:AddTabSection({
 	Name = "Settings",
 	Order = 2,
-})```
+})
+```
 
 --// Tab [MAIN]
 
-```local Main = Window:AddTab({
+```
+local Main = Window:AddTab({
 	Title = "Components",
 	Section = "Main",
 	Icon = "rbxassetid://11963373994"
-})```
+})
+```
 
 Sextion
 
-```Window:AddSection({ Name = "Non Interactable", Tab = Main }) ```
+```
+Window:AddSection({ Name = "Non Interactable", Tab = Main })
+```
 
 pargap
 
-```Window:AddParagraph({
+```
+Window:AddParagraph({
 	Title = "Paragraph",
 	Description = "Insert any important text here.",
 	Tab = Main
-}) ```
+})
+ ```
 
 sextion #2
 
-```Window:AddSection({ Name = "Interactable", Tab = Main }) ```
+```
+Window:AddSection({ Name = "Interactable", Tab = Main })
+```
 
 a button for this eheh
 
-```Window:AddButton({
+```
+Window:AddButton({
 	Title = "Button",
 	Description = "I wonder what this does",
 	Tab = Main,
@@ -137,11 +157,13 @@ a button for this eheh
 			Duration = 5
 		})
 	end,
-}) ```
+})
+```
 
 slizer
 
-```Window:AddSlider({
+```
+Window:AddSlider({
 	Title = "Slider",
 	Description = "Sliding",
 	Tab = Main,
@@ -149,11 +171,13 @@ slizer
 	Callback = function(Amount) 
 		warn(Amount);
 	end,
-}) ```
+})
+```
 
 togol
 
-```Window:AddToggle({
+```
+Window:AddToggle({
 	Title = "Toggle",
 	Description = "Switching",
 	Tab = Main,
@@ -191,8 +215,12 @@ Window:AddDropdown({
 	Callback = function(Number) 
 		warn(Number);
 	end,
-}) 
+})
+```
 
+ketbind
+
+```
 Window:AddKeybind({
 	Title = "Keybind",
 	Description = "Binding",
@@ -200,9 +228,12 @@ Window:AddKeybind({
 	Callback = function(Key) 
 		warn("Key Set")
 	end,
-}) 
+})
+```
 
 --// Tab [SETTINGS]
+
+```
 local Keybind = nil
 local Settings = Window:AddTab({
 	Title = "Settings",
@@ -260,10 +291,12 @@ Window:Notify({
 	Description = "Press Left Alt to Minimize and Open the tab!", 
 	Duration = 10
 })
+```
 
 --// Keybind Example
+```
 UserInputService.InputBegan:Connect(function(Key) 
 	if Key == Keybind then
 		warn("You have pressed the minimize keybind!");
 	end
-end)
+end)```
